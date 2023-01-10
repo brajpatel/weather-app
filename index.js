@@ -58,5 +58,18 @@ function displayData(data) {
     pressure.innerHTML = `${data.main.pressure}mb`;
     windSpeed.innerHTML = `${data.wind.speed}m/s`;
 
+    switch(data.weather[0].main) {
+        case 'Clear':
+            background.style.backgroundImage = 'url(./images/clear-sky.jpg)'
+            break;
+
+        case 'Clouds':
+            background.style.backgroundImage = 'url(./images/clouds.jpg)'
+            break;
+
+        case 'Rain':
+            background.style.backgroundImage = 'url(./images/rain.jpg)';
+    }
+
     infoContainer.classList.add('animate');
 }
