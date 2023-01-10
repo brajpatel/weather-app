@@ -68,7 +68,7 @@ function displayData(data) {
             break;
 
         case 'Rain':
-            background.style.backgroundImage = 'url(./images/rain.jpg)';
+            background.style.backgroundImage = 'url(./images/rain.jpg)'
             break;
     }
 
