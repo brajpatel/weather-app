@@ -6,7 +6,6 @@
 }
 
 body {
-    height: 100vh;
     background: #eaebea;
     color: white;
     font-family: 'Barlow', sans-serif;
@@ -42,15 +41,30 @@ form input,
 button {
     padding: 5px 10px;
     outline: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    border-radius: 50px;
 }
 
 input {
     font-family: 'Barlow', sans-serif;
+    border: 2px solid transparent;
+    margin-right: 5px;
+}
+
+input:focus {
+    border: 2px solid rgb(30, 150, 202);
 }
 
 button {
     cursor: pointer;
+    background: rgb(30, 150, 202);
+    color: white;
+    height: 40px;
+    width: 40px;
+}
+
+button:focus {
+    background: rgb(24, 123, 165);
 }
 
 .error-msg {
@@ -58,13 +72,13 @@ button {
     position: absolute;
 }
 
-.nav-right div {
+.link-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nav-right div > a {
+.link-container a {
     color: white;
     text-decoration: none;
     font-size: 1.8rem;
@@ -83,7 +97,7 @@ button {
 
 .info-container {
     height: 60%;
-    min-width: 60%;
+    min-width: 65%;
     background: #121212;
     box-shadow: 0 0 30px black;
     display: grid;
@@ -114,11 +128,12 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
 .location-info h2 > i {
-    animation: bounce 5s ease infnite;
+    margin-right: 10px;
+    animation: bounce 5s ease infinite;
 }
 
 @keyframes bounce {
@@ -153,30 +168,42 @@ button {
 
 .weather-info h2 {
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .other-info {
     grid-area: 2 / 1 / 3 / 3;
     border-top: 1px solid #eaebea;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 2rem;
 }
 
-.other-info div {
+.top-row,
+.bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 2rem;
+}
+
+.top-row div,
+.bottom-row div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    gap: 1rem;
 }
 
-.other-info div > h3 > i {
+.top-row div > h3 > i,
+.bottom-row div > h3 > i {
     margin-left: 10px;
 }
 
-.other-info div > p {
+.top-row div > h3 > p,
+.bottom-row div > h3 > p {
     font-size: 1.2rem;
 }
 
@@ -215,5 +242,80 @@ button {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        margin-left: 2rem;
+    }
+
+    .background {
+        height: 140vh;
+    }
+
+    .info-container {
+        grid-template: 1fr 1fr 3fr / 1fr;
+        gap: 1rem;
+        padding: 1rem;
+        height: 60%;
+        min-width: 70%;
+    }
+
+    .location-info {
+        grid-area: 1 / 1 / 2 / 2;
+        border-right: none;
+        border-bottom: 1px solid #eaebea;
+    }
+
+    .weather-info {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .other-info {
+        grid-area: 3 / 1 / 4 / 2;
+        display: grid;
+        grid-template: repeat(2, 1fr) / 1fr;
+        gap: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .title {
+        display: none;
+    }
+
+    .link-container {
+        display: none;
+    }
+
+    .info-container {
+        height: 80%;
+        min-width: 70%;
+    }
+
+    .location-info {
+        font-size: 1.6rem;
+    }
+
+    .other-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bottom-row {
+        display: flex;
+        flex-direction: column;
     }
 }
