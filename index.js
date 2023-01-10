@@ -49,7 +49,7 @@ function displayData(data) {
     const pressure = document.getElementById('pressure');
     const windSpeed = document.getElementById('wind-speed');
 
-    location.innerHTML = `${data.name}, ${data.sys.country}`;
+    location.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${data.name}, ${data.sys.country}`;
     weatherMain.textContent = data.weather[0].main;
     weatherDesc.textContent = data.weather[0].description.slice(0, 1).toUpperCase() + data.weather[0].description.slice(1);
     temperature.innerHTML = `${data.main.temp} &deg;C`;
