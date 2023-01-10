@@ -12,7 +12,7 @@
 <body>
 
     <nav>
-        <h1>Weather App<i class="fa-solid fa-cloud-sun"></i></h1>
+        <h1><span class="title">Weather App</span><i class="fa-solid fa-cloud-sun"></i></h1>
 
         <div class="nav-right">
             <form action="#">
@@ -21,7 +21,7 @@
                 <p id="error-msg" class="error-msg"></p>
             </form>
 
-            <div>
+            <div class="link-container">
                 <a href="https://github.com/brajpatel" target="_blank" title="github/brajpatel"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
@@ -40,25 +40,30 @@
             </div>
 
             <div class="other-info">
-                <div>
-                    <h3>Temperature<i class="fa-solid fa-temperature-three-quarters" style="color: rgb(221, 30, 30);"></i></h3>
-                    <p id="temperature"></p>
+                <div class="top-row">
+                    <div>
+                        <h3>Temperature<i class="fa-solid fa-temperature-three-quarters" style="color: rgb(221, 30, 30);"></i></h3>
+                        <p id="temperature"></p>
+                    </div>
+                    <div>
+                        <h3>Feels like<i class="fa-solid fa-hand" style="color: rgb(110, 207, 123);"></i></h3>
+                        <p id="feels-like"></p>
+                    </div>
+                    <div>
+                        <h3>Humidity<i class="fa-solid fa-droplet" style="color: rgb(68, 135, 235);"></i></h3>
+                        <p id="humidity"></p>
+                    </div>
                 </div>
-                <div>
-                    <h3>Feels like<i class="fa-solid fa-hand" style="color: rgb(110, 207, 123);"></i></h3>
-                    <p id="feels-like"></p>
-                </div>
-                <div>
-                    <h3>Humidity<i class="fa-solid fa-droplet" style="color: rgb(68, 135, 235);"></i></h3>
-                    <p id="humidity"></p>
-                </div>
-                <div>
-                    <h3>Pressure<i class="fa-solid fa-hurricane" style="color: rgb(224, 224, 224);"></i></h3>
-                    <p id="pressure"></p>
-                </div>
-                <div>
-                    <h3>Wind speed<i class="fa-solid fa-wind" style="color: rgb(129, 129, 129);"></i></h3>
-                    <p id="wind-speed"></p>
+                
+                <div class="bottom-row">
+                    <div>
+                        <h3>Pressure<i class="fa-solid fa-hurricane" style="color: rgb(224, 224, 224);"></i></h3>
+                        <p id="pressure"></p>
+                    </div>
+                    <div>
+                        <h3>Wind speed<i class="fa-solid fa-wind" style="color: rgb(129, 129, 129);"></i></h3>
+                        <p id="wind-speed"></p>
+                    </div>
                 </div>
             </div>
         </div>
