@@ -30,14 +30,19 @@ h1 i {
     margin-left: 10px;
 }
 
-form {
-    margin-right: 3rem;
+.nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 2rem;
 }
 
 form input,
 button {
-    padding: 4px 8px;
+    padding: 5px 10px;
     outline: none;
+    font-size: 1.1rem;
 }
 
 button {
@@ -47,6 +52,18 @@ button {
 .error-msg {
     color: red;
     position: absolute;
+}
+
+.nav-right div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-right div > a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
 }
 
 .background {
@@ -93,7 +110,33 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
+}
+
+.location-info h2 > i {
+    animation: bounce 5s ease infnite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    8% {
+        transform: translateY(-15px);
+    }
+
+    16% {
+        transform: translateY(0);
+    }
+
+    24% {
+        transform: translateY(-15px);
+    }
+
+    32% {
+        transform: translateY(0);
+    }
 }
 
 .weather-info {
