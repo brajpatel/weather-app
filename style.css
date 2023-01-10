@@ -81,7 +81,7 @@ button {
     align-items: center;
 }
 
-/* .overlay {
+.overlay {
     height: 100%;
     width: 100%;
     background: rgba(255, 255, 255, 0.75);
@@ -116,4 +116,4 @@ button {
     to {
         transform: rotate(360deg);
     }
-} */
+}
