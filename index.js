@@ -10,7 +10,6 @@ async function getData() {
     const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=6a9362f6d5ba45f9ed5420fcab460ff0&units=metric', { mode: 'cors' })
     const data = await response.json();
 
-    console.log(data)
     displayData(data);
 
     overlay.style.display = 'none';
@@ -19,8 +18,8 @@ async function getData() {
 getData();
 
 locationSearch.addEventListener('click', async () => {
-    overlay.style.display = 'block';
     infoContainer.classList.remove('animate');
+    overlay.style.display = 'block';
 
     let location = locationInput.value;
 
@@ -29,6 +28,7 @@ locationSearch.addEventListener('click', async () => {
 
     if(data.hasOwnProperty('message') && data.message !== 0) {
         errorMsg.textContent = data.message.slice(0, 1).toUpperCase() + data.message.slice(1) + ', please try again!';
+        overlay.style.display = 'none';
     }
     else {
         errorMsg.textContent = '';
