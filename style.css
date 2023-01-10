@@ -22,7 +22,7 @@ nav {
     align-items: center;
 }
 
-/* h1 {
+h1 {
     margin-left: 3rem;
 }
 
@@ -63,7 +63,7 @@ button {
     padding: 10px;
 }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(-15px);
