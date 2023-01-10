@@ -63,7 +63,7 @@ button {
     padding: 10px;
 }
 
-/* @keyframes fadeIn {
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(-15px);
@@ -81,7 +81,7 @@ button {
     align-items: center;
 }
 
-.overlay {
+/* .overlay {
     height: 100%;
     width: 100%;
     background: rgba(255, 255, 255, 0.75);
