@@ -4,12 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/048208056e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
 <body>
 
-    <h1>Is it on?</h1>
+    <nav>
+        <h1>Weather App<i class="fa-solid fa-cloud-sun"></i></h1>
+
+        <form action="#">
+            <input id="location-input" type="text" placeholder="Search location here">
+            <button id="location-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <p id="error-msg"></p>
+        </form>
+    </nav>
+
+    <!-- <div id="background" class="background">
+        <div id="info-container" class="info-container">
+            <div class="location-info">
+                <h2 id="location"></h2>
+            </div>
+
+            <div class="weather-info">
+                <h2>Current weather conditions:</h2>
+                <h3 id="weather-main"></h3>
+                <h3 id="weather-desc"></h3>
+            </div>
+
+            <div class="other-info">
+                <div>
+                    <h3>Temperature<i class="fa-solid fa-temperature-three-quarters"></i></h3>
+                    <p id="temperature"></p>
+                </div>
+                <div>
+                    <h3>Feels like<i class="fa-solid fa-hand"></i></h3>
+                    <p id="feels-like"></p>
+                </div>
+                <div>
+                    <h3>Humidity<i class="fa-solid fa-droplet"></i></h3>
+                    <p id="humidity"></p>
+                </div>
+                <div>
+                    <h3>Pressure<i class="fa-solid fa-hurricane"></i></h3>
+                    <p id="pressure"></p>
+                </div>
+                <div>
+                    <h3>Wind speed<i class="fa-solid fa-wind"></i></h3>
+                    <p id="wind-speed"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <div class="loader-container">
+            <div class="loader"></div>
+        </div>
+    </div> -->
     
 <script src="index.js"></script>
 </body>
