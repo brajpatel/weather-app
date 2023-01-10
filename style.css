@@ -128,7 +128,7 @@ button:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
 
 .location-info h2 > i {
@@ -164,6 +164,7 @@ button:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1.6rem;
 }
 
 .weather-info h2 {
