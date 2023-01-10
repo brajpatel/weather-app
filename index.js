@@ -28,7 +28,7 @@ locationSearch.addEventListener('click', async () => {
     const data = await response.json();
 
     if(data.hasOwnProperty('message') && data.message !== 0) {
-        errorMsg.textContent = data.message.slice(0, 1).toUpperCase() + data.message.slice(1) + '!';
+        errorMsg.textContent = data.message.slice(0, 1).toUpperCase() + data.message.slice(1) + ', please try again!';
     }
     else {
         errorMsg.textContent = '';
@@ -64,11 +64,12 @@ function displayData(data) {
             break;
 
         case 'Clouds':
-            background.style.backgroundImage = 'url(./images/clouds.jpg)'
+            background.style.backgroundImage = 'url(./images/cloudy.jpg)'
             break;
 
         case 'Rain':
             background.style.backgroundImage = 'url(./images/rain.jpg)';
+            break;
     }
 
     infoContainer.classList.add('animate');
