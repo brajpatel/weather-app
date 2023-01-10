@@ -7,7 +7,7 @@ const overlay = document.getElementById('overlay');
 async function getData() {
     overlay.style.display = 'block';
 
-    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=6a9362f6d5ba45f9ed5420fcab460ff0', { mode: 'cors' })
+    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=6a9362f6d5ba45f9ed5420fcab460ff0&units=metric', { mode: 'cors' })
     const data = await response.json();
 
     console.log(data)
@@ -24,7 +24,7 @@ locationSearch.addEventListener('click', async () => {
 
     let location = locationInput.value;
 
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=6a9362f6d5ba45f9ed5420fcab460ff0`, { mode: 'cors' })
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=6a9362f6d5ba45f9ed5420fcab460ff0&units=metric`, { mode: 'cors' })
     const data = await response.json();
 
     if(data.hasOwnProperty('message') && data.message !== 0) {
@@ -48,6 +48,15 @@ function displayData(data) {
     const humidity = document.getElementById('humidity');
     const pressure = document.getElementById('pressure');
     const windSpeed = document.getElementById('wind-speed');
+
+    location.innerHTML = `${data.name}, ${data.sys.country}`;
+    weatherMain.textContent = data.weather[0].main;
+    weatherDesc.textContent = data.weather[0].description.slice(0, 1).toUpperCase() + data.weather[0].description.slice(1);
+    temperature.innerHTML = `${data.main.temp} &deg;C`;
+    feelsLike.innerHTML = `${data.main.feels_like} &deg;C`;
+    humidity.innerHTML = `${data.main.humidity}%`;
+    pressure.innerHTML = `${data.main.pressure}mb`;
+    windSpeed.innerHTML = `${data.wind.speed}m/s`;
 
     infoContainer.classList.add('animate');
 }
