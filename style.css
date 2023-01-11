@@ -319,3 +319,18 @@ button:focus {
         flex-direction: column;
     }
 }
+
+@media (max-width: 700px) {
+    nav {
+        display: flex;
+        justify-content: center;    
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .nav-right {
+        margin-right: 0;
+    }
+}
