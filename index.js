@@ -67,8 +67,16 @@ function displayData(data) {
             background.style.backgroundImage = 'url(./images/cloudy.jpg)'
             break;
 
+        case 'Mist':
+            background.style.backgroundImage = 'url(./images/mist.jpg)'
+            break;
+
         case 'Rain':
             background.style.backgroundImage = 'url(./images/rain.jpg)'
+            break;
+
+        default:
+            background.style.backgroundImage = 'url(./images/clear-sky.jpg)'
             break;
     }
 
