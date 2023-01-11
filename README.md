@@ -1,6 +1,6 @@
 # Weather App
-![preview-img1](https://github.com/brajpatel/weather-app/blob/main/dist/images/preview-img1.jpg)
-![preview-img2](https://github.com/brajpatel/weather-app/blob/main/dist/images/preview-img2.jpg)
+![preview-img1](https://github.com/brajpatel/weather-app/blob/main/images/preview-img1.jpg)
+![preview-img2](https://github.com/brajpatel/weather-app/blob/main/images/preview-img2.jpg)
 ## About
 
 <br/><br/>
