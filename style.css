@@ -246,7 +246,7 @@ button:focus {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     h1 {
         margin-left: 2rem;
     }
@@ -281,7 +281,7 @@ button:focus {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
     h1 {
         font-size: 2rem;
     }
@@ -296,7 +296,6 @@ button:focus {
 
     .info-container {
         height: 80%;
-        min-width: 70%;
     }
 
     .location-info {
